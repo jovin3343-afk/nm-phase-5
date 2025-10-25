@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+
+  <style>
+    /* ===== RESET & GLOBAL ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    /* ===== MAIN CONTAINER ===== */
+    .dashboard {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 20px;
+      width: 380px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
+
+    .dashboard h1 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    /* ===== SEARCH BOX ===== */
+    .search-box {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+
+    .search-box input {
+      padding: 10px;
+      border: none;
+      border-radius: 20px 0 0 20px;
+      outline: none;
+      width: 70%;
+      font-size: 1rem;
+    }
+
+    .search-box button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 0 20px 20px 0;
+      background: #005bea;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .search-box button:hover {
+      background: #0039a6;
+    }
+
+    /* ===== WEATHER CARD ===== */
+    .weather-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 15px;
+      margin-top: 10px;
+    }
+
+    .city-name {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .date {
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      opacity: 0.8;
+    }
+
+    .temp {
+      font-size: 3.5rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .temp img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .desc {
+      text-transform: capitalize;
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+
+    /* ===== DETAILS SECTION ===== */
+    .details {
+      margin-top: 20px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.95rem;
+    }
+
+    .details p {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 15px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .label {
+      opacity: 0.8;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      margin-top: 25px;
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dashboard">
+    <h1>🌤️ Weather Dashboard</h1>
+
+    <div class="search-box">
+      <input type="text" placeholder="Enter city name..." />
+      <button>Search</button>
+    </div>
+
+    <div class="weather-card">
+      <div class="city-name">New York, USA</div>
+      <div class="date">Saturday, October 25, 2025</div>
+
+      <div class="temp">
+        <span>22°C</span>
+        <img src="https://openweathermap.org/img/wn/01d.png" alt="weather icon">
+      </div>
+
+      <div class="desc">Clear Sky</div>
+
+      <div class="details">
+        <p><span class="label">🌡️ Feels like:</span> <span>24°C</span></p>
+        <p><span class="label">💧 Humidity:</span> <span>58%</span></p>
+        <p><span class="label">🌬️ Wind:</span> <span>12 km/h</span></p>
+      </div>
+    </div>
+
+    <footer>Designed for Hackathon Project ⚡</footer>
+  </div>
+</body>
+</html>
